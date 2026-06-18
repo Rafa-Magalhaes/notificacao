@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: 'Source Sans 3', Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #F4F9FF;
+            border-radius: 0 0 30px 30px;
+        }
+        .header {
+            background-color: #F4F9FF;
+            padding: 40px 40px 30px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #1D3C6B;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+        .content {
+            padding: 0 40px 30px 40px;
+            color: #1D3C6B;
+            font-size: 18px;
+            line-height: 26px;
+        }
+        .info-box {
+            background-color: #FFF8E8;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 25px 0;
+            color: #484234;
+        }
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin: 10px 5px;
+        }
+        .btn-blue {
+            background-color: #4F77B4;
+            border: 1px solid #0D3D85;
+        }
+        .btn-red {
+            background-color: #C75353;
+            border: 1px solid #850D0D;
+        }
+        .footer {
+            padding: 20px 40px;
+            text-align: center;
+            color: #6a7f9e;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>Olá, <span th:text="${nome}">Usuário</span>! 👋</h1>
+        <p style="font-size: 18px; color: #1D3C6B; margin: 0;">
+            Seja muito bem-vindo à nossa plataforma!
+        </p>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <p>Estamos muito felizes em ter você conosco.</p>
+
+        <div class="info-box">
+            <p><strong>Próximos passos:</strong></p>
+            <p>Complete seu cadastro e comece a explorar todas as funcionalidades disponíveis.</p>
+        </div>
+
+        <p style="text-align: center; margin: 30px 0;">
+            Caso precise de ajuda, nossa equipe de suporte está à disposição.
+        </p>
+
+        <!-- Botões -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="#" class="button btn-blue">Acessar Plataforma</a>
+            <a href="#" class="button btn-red">Falar com Suporte</a>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>Este é um email automático. Por favor, não responda.</p>
+        <p style="margin-top: 10px;">
+            Atenciosamente,<br>
+            <strong>Equipe da Plataforma</strong>
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
