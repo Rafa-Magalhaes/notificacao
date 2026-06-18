@@ -36,5 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
-### Info Sensíveis ###
-application-dev.yml
+# Arquivos de configuração sensíveis
+src/main/resources/application-dev.yml
+src/main/resources/application-dev.yaml
