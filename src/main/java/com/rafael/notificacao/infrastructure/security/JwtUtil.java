@@ -12,7 +12,7 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    @Value("${jwt.secret}")
+    @Value("${jwt.secret:chave-falsa-para-testes-no-ci-nao-usar-em-producao}")
     private String secretKey;
 
     public Claims extractClaims(String token) {
