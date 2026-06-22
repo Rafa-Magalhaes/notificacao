@@ -20,8 +20,8 @@ public class EmailController {
 
         emailService.enviarEmailComTemplate(
                 request.getDestinatario(),
-                "Bem-vindo à nossa plataforma!",
-                "email-boas-vindas",
+                "Bem-vindo à nossa plataforma!",           // Assunto do e-mail
+                "email-boas-vindas",                       // Nome do template
                 java.util.Map.of("nome", request.getNome())
         );
 
