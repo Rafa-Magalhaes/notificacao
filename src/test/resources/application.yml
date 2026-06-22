@@ -1,0 +1,3 @@
+jwt:
+  secret: chave-falsa-para-testes-no-ci-nao-usar-em-producao
+  expiration: 86400000
