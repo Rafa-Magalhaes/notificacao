@@ -1,4 +1,4 @@
-package com.rafael.notificacao.business.service;
+package com.rafael.notificacao.domain.service;
 
 import com.rafael.notificacao.infrastructure.mail.EmailSender;
 import lombok.RequiredArgsConstructor;

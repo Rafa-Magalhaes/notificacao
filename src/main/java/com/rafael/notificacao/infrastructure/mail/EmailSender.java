@@ -1,5 +1,6 @@
 package com.rafael.notificacao.infrastructure.mail;
 
+import com.rafael.notificacao.api.exceptions.EmailNotSentException;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
@@ -19,18 +20,20 @@ public class EmailSender {
 
     public void sendEmail(String to, String subject, String htmlBody) {
         try {
+
             MimeMessage message = javaMailSender.createMimeMessage();
+
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-            helper.setFrom(fromEmail);           // ← LINHA MAIS IMPORTANTE
+            helper.setFrom(fromEmail);
             helper.setTo(to);
             helper.setSubject(subject);
-            helper.setText(htmlBody, true);      // true = conteúdo HTML
+            helper.setText(htmlBody, true);
 
             javaMailSender.send(message);
 
         } catch (MessagingException e) {
-            throw new RuntimeException("Erro ao enviar e-mail para: " + to, e);
+            throw new EmailNotSentException("Erro ao disparar e-mail para: " + to, e);
         }
     }
 }
