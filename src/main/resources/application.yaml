@@ -8,8 +8,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    username: ${MAIL_USERNAME:teste@gmail.com}
+    password: ${MAIL_PASSWORD:123456}
     properties:
       mail:
         smtp:
@@ -27,3 +27,7 @@ spring:
     mode: HTML
     encoding: UTF-8
     cache: false
+
+jwt:
+  secret: ${APP_JWT_SECRET:chave-super-secreta-minima-32-caracteres-para-HS512-2026}
+  expiration: 86400000
