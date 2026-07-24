@@ -36,7 +36,12 @@ public class JwtUtil {
     }
 
     public String extractTokenType(String token) {
-        return extractClaims(token).get("tokenType", String.class);
+        Claims claims = extractClaims(token);
+        String type = claims.get("tokentype", String.class);
+        if (type == null) {
+            type = claims.get("tokenType", String.class);
+        }
+        return type;
     }
 
     public boolean isServiceToken(String token) {
