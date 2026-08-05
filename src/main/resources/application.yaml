@@ -30,4 +30,4 @@ spring:
 
 jwt:
   secret: ${APP_JWT_SECRET:chave-super-secreta-minima-32-caracteres-para-HS512-2026}
-  expiration: 86400000
+  expiration-ms: 86400000
